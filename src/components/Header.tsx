@@ -12,7 +12,7 @@ function Header() {
         <div className="md:hidden">
           <MobileNav />
         </div>
-        <div className="hiden md:block">
+        <div className="hidden md:block">
           <MainNav />
         </div>
       </div>
