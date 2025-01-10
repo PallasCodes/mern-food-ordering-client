@@ -31,3 +31,5 @@ export default function CuisinesSection() {
     </div>
   )
 }
+
+// 7:47:26

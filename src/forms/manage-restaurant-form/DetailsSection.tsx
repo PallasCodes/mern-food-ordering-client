@@ -22,7 +22,7 @@ export default function DetailsSection() {
       <FormField
         control={control}
         name="restaurantName"
-        render={(field) => (
+        render={({ field }) => (
           <FormItem>
             <FormLabel>Name</FormLabel>
             <FormControl>
@@ -37,7 +37,7 @@ export default function DetailsSection() {
         <FormField
           control={control}
           name="city"
-          render={(field) => (
+          render={({ field }) => (
             <FormItem className="flex-1">
               <FormLabel>City</FormLabel>
               <FormControl>
@@ -50,7 +50,7 @@ export default function DetailsSection() {
         <FormField
           control={control}
           name="country"
-          render={(field) => (
+          render={({ field }) => (
             <FormItem className="flex-1">
               <FormLabel>Country</FormLabel>
               <FormControl>
@@ -65,7 +65,7 @@ export default function DetailsSection() {
       <FormField
         control={control}
         name="deliveryPrice"
-        render={(field) => (
+        render={({ field }) => (
           <FormItem className="max-w-[25%]">
             <FormLabel>Delivery price ($)</FormLabel>
             <FormControl>
@@ -79,7 +79,7 @@ export default function DetailsSection() {
       <FormField
         control={control}
         name="estimatedDeliveryTime"
-        render={(field) => (
+        render={({ field }) => (
           <FormItem className="max-w-[25%]">
             <FormLabel>Estimated delivery time (minutes)</FormLabel>
             <FormControl>
