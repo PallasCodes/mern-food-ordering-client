@@ -92,3 +92,5 @@ export default function DetailsSection() {
     </div>
   )
 }
+
+// 6:44:13

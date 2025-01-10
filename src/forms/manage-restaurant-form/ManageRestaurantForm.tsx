@@ -4,6 +4,12 @@ import { z } from 'zod'
 
 import { Form } from '@/components/ui/form'
 import DetailsSection from './DetailsSection'
+import { Separator } from '@/components/ui/separator'
+import CuisinesSection from './CuisinesSection'
+import MenuSection from './MenuSection'
+import ImageSection from './ImageSection'
+import { Button } from '@/components/ui/button'
+import LoadingButton from '@/components/LoadingButton'
 
 const formSchema = z.object({
   restaurantName: z.string({
@@ -57,6 +63,13 @@ export default function ManageRestaurantForm({ onSave, isLoading }: Props) {
         className="space-y-8 bg-gray-50 p-10 rounded-lg"
       >
         <DetailsSection />
+        <Separator />
+        <CuisinesSection />
+        <Separator />
+        <MenuSection />
+        <Separator />
+        <ImageSection />
+        {isLoading ? <LoadingButton /> : <Button type="submit">Submit</Button>}
       </form>
     </Form>
   )
