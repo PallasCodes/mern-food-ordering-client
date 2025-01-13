@@ -37,7 +37,7 @@ export default function OrderSummary({ cartItems, restaurant, removeFromCart }: 
             <span>
               <Badge variant="outline" className="mr-2">
                 {item.quantity}
-              </Badge>{' '}
+              </Badge>
               {item.name}
             </span>
             <span className="flex items-center gap-1">
