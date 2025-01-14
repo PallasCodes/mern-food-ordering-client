@@ -11,9 +11,10 @@ import UserProfileForm, { UserFormData } from '@/forms/user-profile-form/UserPro
 type Props = {
   onCheckout: (userFormData: UserFormData) => void
   disabled: boolean
+  isLoading: boolean
 }
 
-export default function CheckoutButton({ onCheckout, disabled }: Props) {
+export default function CheckoutButton({ onCheckout, disabled, isLoading }: Props) {
   const { isAuthenticated, isLoading: isAuthLoading, loginWithRedirect } = useAuth0()
 
   const { pathname } = useLocation()
@@ -32,7 +33,7 @@ export default function CheckoutButton({ onCheckout, disabled }: Props) {
     )
   }
 
-  if (isAuthLoading || !currentUser) {
+  if (isAuthLoading || !currentUser || isLoading) {
     return <LoadingButton />
   }
 
@@ -55,3 +56,5 @@ export default function CheckoutButton({ onCheckout, disabled }: Props) {
     </Dialog>
   )
 }
+
+// 13:42:53
